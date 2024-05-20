@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perilaku Antikoruptif</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .transition-transform {
+            transition: transform 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- navbar -->
+    <nav class="bg-blue-600 p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">Kelompok 4</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="text-white">Home</a>
+                <a href="#materi" class="text-white">Materi</a>
+                <a href="#anggota" class="text-white">Anggota</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" id="navbar-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:hidden" id="navbar-menu">
+            <a href="#home" class="block text-white px-4 py-2">Home</a>
+            <a href="#materi" class="block text-white px-4 py-2">Materi</a>
+            <a href="#anggota" class="block text-white px-4 py-2">Anggota</a>
+        </div>
+    </nav>
+
+    <header id="home" class="bg-blue-200 text-center py-20">
+        <h1 class="text-4xl font-bold mb-4">Pendidikan Anti Korupsi</h1>
+        <p class="text-lg">Membangun Integritas untuk Generasi yang Lebih Baik</p>
+    </header>
+
+    <!-- materi -->
+    <section id="materi" class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-10">Perilaku Antikoruptif di lingkungan kampus</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Kasus Tipsen</h3>
+                <p class="text-gray-700">Untuk Menghindari Kasus Tipsen di lingkungan kampus maka mengubah sistem absensi menjadi digital, karena jika hanya sebatas menggunakan lembar absen saja sangat mudah untuk melakukan tipsen. Absen digital bisa diterapkan dengan berbagai lapis misal harus memasukkan fingerprint dengan kombinasi pengenalan wajah. Dengan demikian resiko tipsen dapat dikurangi.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Pemalsuan Dokumen atau Tanda Tangan</h3>
+                <p class="text-gray-700">Adapun cara untuk mengatasi solusi ini adalah dengan cara mengimplementasikan kontrol yang ketat terhadap pembuatan dan penggunaan dokumen resmi, seperti penggunaan stempel atau tanda tangan digital yang unik dan juga Memberikan pelatihan kepada staf dan anggota organisasi tentang pentingnya memverifikasi keaslian dokumen dan tanda tangan sebelum memprosesnya.
+
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Plagiasi Karya Ilmiah</h3>
+                <p class="text-gray-700">Untuk mengatasi kasus plagiasi karya ilmiah biasanya dicek turnitinnya,tujuannya mencocokan isi karya ilmiah dengan konten yang berada di internet atau sumber lain sehingga ditemukanlah kemiripan.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Data Fiktif Karya Ilmiah</h3>
+                <p class="text-gray-700">Berbeda dengan kasus plagiasi karya ilmiah, solusi untuk mengetahui karya ilmiah terjamin fakta dan kebenarannya perlu adanya pengumpulan progres beserta dokumentasi yang relevan,  tidak lupa juga dengan diwajibkannya daftar pustaka. Dengan beberapa solusi di atas maka karya ilmiah dapat dipercaya kebenarannya</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Penyalahgunaan Dana Organisasi Mahasiswa</h3>
+                <p class="text-gray-700">Penyalahgunaan dana organisai mahasiswa sering kali terjadi, maraknya perilaku ini membuat lingkungan organisasi menjadi kotor. Adapun cara mengatasi masalah tersebut adalah menerapkan sistem akuntansi yang ketat dan transparan untuk pengelolaan dana organisasi mahasiswa, termasuk pembukuan yang jelas dan laporan keuangan yang dapat diakses oleh anggota organisasi.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Penyuapan dalam Penerimaan Mahasiswa Baru</h3>
+                <p class="text-gray-700">Selain masalah di atas kasus penyuapan mahasiswa baru juga marak terjadi yang dilakukan oleh oknum demi mengguntungakan dirinya sendiri. Adapun cara mengatasinya dengan cara memperkuat pengawasan terhadap proses penerimaan mahasiswa baru dengan melibatkan lebih banyak pihak yang independen dan juga mengadopsi prosedur penerimaan yang transparan dan adil, seperti penggunaan kriteria seleksi yang jelas dan evaluasi berbasis kinerja.</p>
+            </div>
+    </section>
+
+    <!-- member -->
+    <section id="anggota" class="bg-blue-200 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">Anggota Kelompok</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="img/PAK-1.jpg" alt="Foto Anggota 1" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-bold mb-2">Rosi Saraswati Alrasid</h3>
+                    <p class="text-gray-700">237006087</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="img/PAK-2.jpg" alt="Foto Anggota 2" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-bold mb-2">Shifa Halimatu Syadiah</h3>
+                    <p class="text-gray-700">237006089</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="img/PAK-3.jpg" alt="Foto Anggota 3" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-bold mb-2">Muhammad Ikhsan Fauzi</h3>
+                    <p class="text-gray-700">237006115</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8 justify-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="img/PAK-4.jpg" alt="Foto Anggota 4" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-bold mb-2">Luthfi Putra Pratama</h3>
+                    <p class="text-gray-700">237006119</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="img/PAK-5.jpg" alt="Foto Anggota 5" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-bold mb-2">Iqbal Mutaqin</h3>
+                    <p class="text-gray-700">237006120</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; Made by Kelompok 4 - 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('navbar-toggle').onclick = function () {
+            var menu = document.getElementById('navbar-menu');
+            menu.classList.toggle('hidden');
+        };
+    </script>
+</body>
+</html>
