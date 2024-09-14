@@ -3,137 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perilaku Antikoruptif</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .transition-transform {
-            transition: transform 0.3s ease;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <title>amelianiStore</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@1.5.3/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <!-- navbar -->
-    <nav class="bg-blue-600 p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-white text-2xl font-bold">Kelompok 4</a>
-            <div class="hidden md:flex space-x-4">
-                <a href="#home" class="text-white">Home</a>
-                <a href="#materi" class="text-white">Materi</a>
-                <a href="#anggota" class="text-white">Anggota</a>
-            </div>
-            <button class="md:hidden text-white focus:outline-none" id="navbar-toggle">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto flex flex-wrap items-center justify-between p-4">
+      <a href="#" class="text-2xl font-bold text-gray-800">
+        ameliani<span class="text-blue-600">Store</span>
+      </a>
+      <button class="text-gray-800 p-2 lg:hidden" id="menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <div class="w-full lg:w-auto lg:flex lg:items-center lg:space-x-4 hidden lg:flex" id="menu">
+        <div class="flex items-center space-x-2">
+          <input type="text" placeholder="Cari produk..." class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Cari</button>
         </div>
-        <div class="hidden md:hidden" id="navbar-menu">
-            <a href="#home" class="block text-white px-4 py-2">Home</a>
-            <a href="#materi" class="block text-white px-4 py-2">Materi</a>
-            <a href="#anggota" class="block text-white px-4 py-2">Anggota</a>
+        <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+            <i class="fas fa-heart"></i> Wishlist
+          </a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+            <i class="fas fa-shopping-cart"></i> Keranjang
+          </a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+            <i class="fas fa-user"></i> Akun
+          </a>
         </div>
+      </div>
     </nav>
-
-    <header id="home" class="bg-blue-200 text-center py-20">
-        <h1 class="text-4xl font-bold mb-4">Pendidikan Anti Korupsi</h1>
-        <p class="text-lg">Membangun Integritas untuk Generasi yang Lebih Baik</p>
-    </header>
-
-    <!-- materi -->
-    <section id="materi" class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-center mb-10">Perilaku Antikoruptif di lingkungan kampus</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold mb-4">Kasus Tipsen</h3>
-                <p class="text-gray-700">Untuk Menghindari Kasus Tipsen di lingkungan kampus maka mengubah sistem absensi menjadi digital, karena jika hanya sebatas menggunakan lembar absen saja sangat mudah untuk melakukan tipsen. Absen digital bisa diterapkan dengan berbagai lapis misal harus memasukkan fingerprint dengan kombinasi pengenalan wajah. Dengan demikian resiko tipsen dapat dikurangi.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold mb-4">Pemalsuan Dokumen atau Tanda Tangan</h3>
-                <p class="text-gray-700">Adapun cara untuk mengatasi solusi ini adalah dengan cara mengimplementasikan kontrol yang ketat terhadap pembuatan dan penggunaan dokumen resmi, seperti penggunaan stempel atau tanda tangan digital yang unik dan juga Memberikan pelatihan kepada staf dan anggota organisasi tentang pentingnya memverifikasi keaslian dokumen dan tanda tangan sebelum memprosesnya.
-
-                </p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold mb-4">Plagiasi Karya Ilmiah</h3>
-                <p class="text-gray-700">Untuk mengatasi kasus plagiasi karya ilmiah biasanya dicek turnitinnya,tujuannya mencocokan isi karya ilmiah dengan konten yang berada di internet atau sumber lain sehingga ditemukanlah kemiripan.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold mb-4">Data Fiktif Karya Ilmiah</h3>
-                <p class="text-gray-700">Berbeda dengan kasus plagiasi karya ilmiah, solusi untuk mengetahui karya ilmiah terjamin fakta dan kebenarannya perlu adanya pengumpulan progres beserta dokumentasi yang relevan,  tidak lupa juga dengan diwajibkannya daftar pustaka. Dengan beberapa solusi di atas maka karya ilmiah dapat dipercaya kebenarannya</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold mb-4">Penyalahgunaan Dana Organisasi Mahasiswa</h3>
-                <p class="text-gray-700">Penyalahgunaan dana organisai mahasiswa sering kali terjadi, maraknya perilaku ini membuat lingkungan organisasi menjadi kotor. Adapun cara mengatasi masalah tersebut adalah menerapkan sistem akuntansi yang ketat dan transparan untuk pengelolaan dana organisasi mahasiswa, termasuk pembukuan yang jelas dan laporan keuangan yang dapat diakses oleh anggota organisasi.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold mb-4">Penyuapan dalam Penerimaan Mahasiswa Baru</h3>
-                <p class="text-gray-700">Selain masalah di atas kasus penyuapan mahasiswa baru juga marak terjadi yang dilakukan oleh oknum demi mengguntungakan dirinya sendiri. Adapun cara mengatasinya dengan cara memperkuat pengawasan terhadap proses penerimaan mahasiswa baru dengan melibatkan lebih banyak pihak yang independen dan juga mengadopsi prosedur penerimaan yang transparan dan adil, seperti penggunaan kriteria seleksi yang jelas dan evaluasi berbasis kinerja.</p>
-            </div>
-    </section>
-
-    <section class="mb-10 text-center">
-        <div class="flex justify-center gap-8">
-            <img src="img/infografis-1.jpg" class="max-w-sm" alt="infografis">
-            <img src="img/infografis-2.jpg" class="max-w-sm" alt="infografis">
-            <img src="img/infografis-3.jpg" class="max-w-sm" alt="infografis">
+    <!-- Mobile Menu -->
+    <div class="lg:hidden w-full lg:flex lg:items-center lg:w-auto hidden" id="mobile-menu">
+      <div class="flex flex-col lg:flex-row lg:space-x-4 lg:space-y-0 space-y-2">
+        <button class="absolute top-4 right-4 text-gray-800 text-2xl" id="mobile-menu-close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="flex flex-col items-center mt-12 space-y-6">
+          <input type="text" placeholder="Cari produk..." class="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Cari</button>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition text-lg">Wishlist</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition text-lg">Keranjang</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600 transition text-lg">Akun</a>
         </div>
+      </div>
+    </div>
+  </header>
 
-        <a href="https://www.instagram.com/4_informatika23/?igsh=MWw4b3M1NjBzZzlxaw%3D%3D" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mt-5 text-2xl">Selengkapnya di Instagram</a>
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-72" style="background-image: url('/path-to-image.jpg');">
+    <div class="flex items-center justify-center h-full bg-black bg-opacity-60">
+      <h1 class="text-white text-4xl font-extrabold text-center">Penuhilah Kebutuhan Harian Anda</h1>
+    </div>
+  </section>
 
-    </section>
-    
+  <!-- Categories Section -->
+  <section class="container mx-auto mt-12">
+    <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Kategori Produk</h2>
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+      <div class="text-center">
+        <img src="/assets/snack.jpg" alt="Snack" class="mx-auto h-16 w-16">
+        <p class="mt-2 text-gray-700 font-medium">Snack</p>
+      </div>
+      <div class="text-center">
+        <img src="/assets/snack.jpg" alt="Sehari-hari" class="mx-auto h-16 w-16">
+        <p class="mt-2 text-gray-700 font-medium">Sehari-hari</p>
+      </div>
+      <div class="text-center">
+        <img src="/assets/snack.jpg" alt="Perawatan" class="mx-auto h-16 w-16">
+        <p class="mt-2 text-gray-700 font-medium">Perawatan</p>
+      </div>
+      <div class="text-center">
+        <img src="/assets/snack.jpg" alt="Perawatan" class="mx-auto h-16 w-16">
+        <p class="mt-2 text-gray-700 font-medium">Perawatan</p>
+      </div>
+      <div class="text-center">
+        <img src="/assets/snack.jpg" alt="Perawatan" class="mx-auto h-16 w-16">
+        <p class="mt-2 text-gray-700 font-medium">Perawatan</p>
+      </div>
+      <div class="text-center">
+        <img src="/assets/snack.jpg" alt="Perawatan" class="mx-auto h-16 w-16">
+        <p class="mt-2 text-gray-700 font-medium">Perawatan</p>
+      </div>
+      <div class="text-center">
+        <img src="/assets/snack.jpg" alt="Perawatan" class="mx-auto h-16 w-16">
+        <p class="mt-2 text-gray-700 font-medium">Perawatan</p>
+      </div>
+      <!-- More categories... -->
+    </div>
+  </section>
 
-    <!-- member -->
-    <section id="anggota" class="bg-blue-200 py-16 px-4 sm:px-6 lg:px-8">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-10">Anggota Kelompok</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="img/PAK-1.jpg" alt="Foto Anggota 1" class="w-32 h-32 mx-auto rounded-full mb-4">
-                    <h3 class="text-xl font-bold mb-2">Rosi Saraswati Alrasid</h3>
-                    <p class="text-gray-700">237006087</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="img/PAK-2.jpg" alt="Foto Anggota 2" class="w-32 h-32 mx-auto rounded-full mb-4">
-                    <h3 class="text-xl font-bold mb-2">Shifa Halimatu Syadiah</h3>
-                    <p class="text-gray-700">237006089</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="img/PAK-3.jpg" alt="Foto Anggota 3" class="w-32 h-32 mx-auto rounded-full mb-4">
-                    <h3 class="text-xl font-bold mb-2">Muhammad Ikhsan Fauzi</h3>
-                    <p class="text-gray-700">237006115</p>
-                </div>
+  <!-- Frequently Bought Products -->
+  <section class="container mx-auto mt-12 mb-10 md:px-0 px-5">
+    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Sering Dibeli</h2>
+    <div class="overflow-x-auto scrollbar-hide">
+      <div class="grid grid-flow-col auto-cols-max gap-4">
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+          <img src="/assets/snack.jpg" alt="Product" class="h-48 mx-auto">
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+            <p class="text-gray-600 mt-2">Rp. 30.000</p>
+            <div class="mt-4 flex justify-between items-center">
+              <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+              <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8 justify-center">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="img/PAK-4.jpg" alt="Foto Anggota 4" class="w-32 h-32 mx-auto rounded-full mb-4">
-                    <h3 class="text-xl font-bold mb-2">Luthfi Putra Pratama</h3>
-                    <p class="text-gray-700">237006119</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="img/PAK-5.jpg" alt="Foto Anggota 5" class="w-32 h-32 mx-auto rounded-full mb-4">
-                    <h3 class="text-xl font-bold mb-2">Iqbal Mutaqin</h3>
-                    <p class="text-gray-700">237006120</p>
-                </div>
+          </div>
+        </div>
+        <!-- Repeat for other products -->
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+          <img src="/assets/snack.jpg" alt="Product" class="h-48 mx-auto">
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+            <p class="text-gray-600 mt-2">Rp. 30.000</p>
+            <div class="mt-4 flex justify-between items-center">
+              <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+              <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other products -->
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+          <img src="/assets/snack.jpg" alt="Product" class="h-48 mx-auto">
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+            <p class="text-gray-600 mt-2">Rp. 30.000</p>
+            <div class="mt-4 flex justify-between items-center">
+              <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+              <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other products -->
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+          <img src="/assets/snack.jpg" alt="Product" class="h-48 mx-auto">
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+            <p class="text-gray-600 mt-2">Rp. 30.000</p>
+            <div class="mt-4 flex justify-between items-center">
+              <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+              <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other products -->
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+          <img src="/assets/snack.jpg" alt="Product" class="h-48 mx-auto">
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+            <p class="text-gray-600 mt-2">Rp. 30.000</p>
+            <div class="mt-4 flex justify-between items-center">
+              <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+              <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other products -->
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+          <img src="/assets/snack.jpg" alt="Product" class="h-48 mx-auto">
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+            <p class="text-gray-600 mt-2">Rp. 30.000</p>
+            <div class="mt-4 flex justify-between items-center">
+              <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+              <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other products -->
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+          <img src="/assets/snack.jpg" alt="Product" class="h-48 mx-auto">
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+            <p class="text-gray-600 mt-2">Rp. 30.000</p>
+            <div class="mt-4 flex justify-between items-center">
+              <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+              <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other products -->
+      </div>
+    </div>
+  </section>
+
+  <!-- All Products Section -->
+  <section class="container mx-auto mt-12 mb-10 md:px-0 px-5">
+    <h2 class="text-2xl font-semibold mb-6 text-gray-800">Semua Produk</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+        <img src="/assets/1.jpg" alt="Product" class="h-48 mx-auto">
+        <div class="mt-4 text-center">
+          <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+          <p class="text-gray-600 mt-2">Rp. 30.000</p>
+          <div class="mt-4 flex justify-between items-center">
+            <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+            <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for other products -->
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+        <img src="/assets/1.jpg" alt="Product" class="h-48 mx-auto">
+        <div class="mt-4 text-center">
+          <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+          <p class="text-gray-600 mt-2">Rp. 30.000</p>
+          <div class="mt-4 flex justify-between items-center">
+            <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+            <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for other products -->
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+        <img src="/assets/1.jpg" alt="Product" class="h-48 mx-auto">
+        <div class="mt-4 text-center">
+          <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+          <p class="text-gray-600 mt-2">Rp. 30.000</p>
+          <div class="mt-4 flex justify-between items-center">
+            <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+            <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for other products -->
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+        <img src="/assets/1.jpg" alt="Product" class="h-48 mx-auto">
+        <div class="mt-4 text-center">
+          <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+          <p class="text-gray-600 mt-2">Rp. 30.000</p>
+          <div class="mt-4 flex justify-between items-center">
+            <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+            <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for other products -->
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+        <img src="/assets/1.jpg" alt="Product" class="h-48 mx-auto">
+        <div class="mt-4 text-center">
+          <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+          <p class="text-gray-600 mt-2">Rp. 30.000</p>
+          <div class="mt-4 flex justify-between items-center">
+            <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+            <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for other products -->
+      <!-- Product Card -->
+      <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow">
+        <img src="/assets/1.jpg" alt="Product" class="h-48 mx-auto">
+        <div class="mt-4 text-center">
+          <h3 class="text-lg font-bold text-gray-800">Minyak Bimoli 1 Liter</h3>
+          <p class="text-gray-600 mt-2">Rp. 30.000</p>
+          <div class="mt-4 flex justify-between items-center">
+            <button class="text-sm text-gray-500 hover:text-gray-800 transition">Wishlist</button>
+            <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700 transition">Keranjang</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for other products -->
+      <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800">
+        <a href="#">
+            <img class="rounded-t-lg" src="assets/1.jpg" alt="product image" />
+        </a>
+        <div class="px-5 pb-5">
+            <a href="#">
+                <h5 class="md:text-xl text-md font-semibold tracking-tight text-gray-900 dark:text-white">Apple Watch Series 7 GPS, Aluminium</h5>
+            </a>
+            
+            <div class="flex flex-col md:flex-row gap-2">
+                <a href="#" class="px-3 py-2 text-xs md:text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:w-3/6 w-full">Wishlist</a>
+                <a href="#" class="px-3 py-2 text-xs md:text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:w-3/6 w-full">Keranjang</a>
             </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; Made by Kelompok 4 - 2024</p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white mt-16">
+    <div class="container mx-auto py-8 flex justify-between">
+      <div>
+        <h3 class="font-bold text-lg">ameliani<span class="text-blue-600">Store</span></h3>
+        <p>Jalan Raya Utara Sodo,</p>
+        <p>0852-8882-7634</p>
+        <p>amelnistore23@gmail.com</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg">Bantuan</h3>
+        <p class="hover:text-blue-500 transition">Pertanyaan</p>
+        <p class="hover:text-blue-500 transition">Pengiriman</p>
+        <p class="hover:text-blue-500 transition">Pengembalian Barang</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg">Pembayaran</h3>
+        <img src="/path-to-payment-methods.png" alt="Payment Methods" class="mt-2">
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        document.getElementById('navbar-toggle').onclick = function () {
-            var menu = document.getElementById('navbar-menu');
-            menu.classList.toggle('hidden');
-        };
-    </script>
+  <!-- Flowbite JS -->
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.js"></script>
+   <!-- Flowbite JS -->
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuClose = document.getElementById('mobile-menu-close');
+  
+      menuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+  
+      mobileMenuClose.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+  
 </body>
 </html>
